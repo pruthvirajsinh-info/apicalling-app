@@ -2,7 +2,6 @@ nav{
     display: grid;
     grid-template-columns: 5rem auto 5rem;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.23);
-    color: red;
 
     .block
     {
@@ -13,11 +12,17 @@ nav{
             color: white;
             font-size: 2rem;
             cursor: pointer;
+            transition: 0.1s ease-in-out;
+            
+                &:hover {
+                    color: #2994ff;
+                }
         }
         img{
             cursor: pointer;
             height: 3rem;
         }
+        
     }
     .data
     {
@@ -25,6 +30,9 @@ nav{
         border-top: none;
         border-bottom: none;
         padding: 0 2rem;
+
+        
+
         ul {
             display: grid;
             grid-template-columns: repeat(5,20%);
@@ -45,6 +53,11 @@ nav{
                     font-weight: 700;
                     letter-spacing: 0.3rem;
                 }
+                transition: 0.1s ease-in-out;
+                
+                &:hover {
+                    color: #2994ff;
+                }
                 
             }
         }
@@ -55,18 +68,18 @@ nav{
     display: block;
     position: absolute;
     z-index: 0;
-    bottom: 0;
+    bottom: 1rem;
     background-color: white;
     width: 20%;
     height: calc(4px / 2 );
     mix-blend-mode: initial;
     pointer-events: none;
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
     &:nth-child(1){
-        transition: calc(0.5s * 0.8) ease-in-out;
+        transition: calc(0.2s * 0.8) ease-in-out;
     }
     &:nth-child(2){
-        transition: calc(0.5s * 1.2) ease-in-out;
+        transition: calc(0.2s * 1.2) ease-in-out;
     }
 
 }

@@ -22,5 +22,16 @@
         border-top: none;
         border-bottom: none;
         height: 80vh;
+        padding-bottom: 15rem;
+    }
+}
+
+::-webkit-scrollbar
+{
+    width: 0.3rem;
+
+    &-thumb
+    {
+        background-color: rgba(219, 219, 219, 0.5);
     }
 }

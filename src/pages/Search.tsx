@@ -34,7 +34,7 @@ const Search = () =>
   return (
     <>
       <div className="search">
-        <input type="text" />
+        <input type="text" className="pokemon-searchbar" placeholder="Search Pokemon"/>
         <PokemonCardGrid pokemons={randomPokemons!} />
       </div>
     </>
