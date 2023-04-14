@@ -9,9 +9,15 @@ footer {
         align-items: center;
 
         svg {
-            color: #e21b5a;
+            // color: #e21b5a;
+            color: orange;
             font-size: 2.5rem;
             cursor: pointer;
+            transition: 0.1s ease-in-out;
+            
+                &:hover {
+                    color: red;
+                }
         }
 
         img {

@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AppTypeInitSTATE } from "../../utils/Types";
+import { AppSliceInitTYPE } from "../../utils/Types";
 
-const initialState:AppTypeInitSTATE = 
+const initialState: AppSliceInitTYPE = 
 {
     toasts: [],
+    userInfo: undefined,
 };
 
 export const AppSlice = createSlice({
@@ -17,10 +18,18 @@ export const AppSlice = createSlice({
             toasts.push(action.payload);
             state.toasts = toasts;
         },
-        clearToast: (state) => {
+
+        clearToasts: (state) => 
+        {
             state.toasts = [];
         },
+
+        setUserStatus: (state, action) => 
+        {
+            state.userInfo = action.payload;
+        },
+
     },
 });
 
-export const { setToast, clearToast } = AppSlice.actions;
+export const { setToast, clearToasts, setUserStatus } = AppSlice.actions;
