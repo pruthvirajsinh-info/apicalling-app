@@ -1,0 +1,61 @@
+.profile {
+	box-sizing: border-box;
+	max-height: 80vh;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	color: white;
+	span:hover {
+		color: var(--accent-color);
+		filter: saturate(4);
+	}
+	&-image {
+		height: 20rem;
+		padding: 0.5rem;
+		border: 0.3rem solid var(--accent-color);
+		border-top-left-radius: 10rem;
+		border-top-right-radius: 10rem;
+
+		transition: 0.1s ease-in-out;
+
+		&:hover {
+			filter: saturate(4);
+			--accent-color {
+				filter: saturate(4);
+			}
+		}
+	}
+	&-text {
+		text-transform: uppercase;
+		letter-spacing: 0.4rem;
+	}
+	h1 {
+		font-size: 4rem;
+	}
+	h3 {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	&-links {
+		display: flex;
+		gap: 2rem;
+		margin-top: 1rem;
+		cursor: pointer;
+		a {
+			color: var(--accent-color);
+			svg {
+				font-size: 3rem;
+				transition: 0.1s ease-in-out;
+
+				&:hover {
+					filter: saturate(4);
+				}
+				&:active {
+					transform: scale(0.8);
+				}
+			}
+		}
+	}
+}

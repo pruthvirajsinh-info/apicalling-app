@@ -160,27 +160,25 @@ const CompareContainer = ({
 							{getStats()}
 						</div>
 					</div>
-					<div>
-						<div className="compare-action-buttons">
-							<button
-								className="compare-btn"
-								onClick={() => dispatch(addPmToList(pokemon))}
-							>
-								Add
-							</button>
-							<button
-								className="compare-btn"
-								onClick={() => navigate(`/pokemon/${pokemon.id}`)}
-							>
-								View
-							</button>
-							<button
-								className="compare-btn"
-								onClick={() => dispatch(removeFromCompare({ id: pokemon.id }))}
-							>
-								Remove
-							</button>
-						</div>
+					<div className="compare-action-buttons">
+						<button
+							className="compare-btn"
+							onClick={() => dispatch(addPmToList(pokemon))}
+						>
+							Add
+						</button>
+						<button
+							className="compare-btn"
+							onClick={() => navigate(`/pokemon/${pokemon.id}`)}
+						>
+							View
+						</button>
+						<button
+							className="compare-btn"
+							onClick={() => dispatch(removeFromCompare({ id: pokemon.id }))}
+						>
+							Remove
+						</button>
 					</div>
 				</div>
 			)}

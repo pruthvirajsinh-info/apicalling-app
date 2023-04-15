@@ -1,12 +1,13 @@
 .compare-container {
 	height: 100%;
+	max-height: 79vh;
 	width: 100%;
 
 	.empty {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 3rem;
+		gap: 1rem;
 		flex-direction: column;
 		height: 100%;
 
@@ -17,9 +18,11 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border: none;
-			background-color: rgba(128, 128, 128, 0.25);
+			background-color: var(--accent-color);
 			transition: 0.1s ease-in-out;
+			&:hover {
+				filter: saturate(3);
+			}
 			&:active {
 				transform: scale(0.7);
 			}
@@ -44,9 +47,12 @@
 		.compare-action-buttons {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
+			margin: 1rem;
+
 			button {
+				padding: 1rem;
 				font-size: 1.2rem;
-				font-weight: 400;
+				font-weight: 700;
 				text-transform: uppercase;
 				color: rgb(228, 228, 228);
 				letter-spacing: 0.1rem;
@@ -118,12 +124,12 @@
 				max-height: 100%;
 				overflow-y: scroll;
 				overflow-x: hidden;
-				padding-bottom: 1rem;
+				padding-bottom: 0.5rem;
 
 				.pokemon-types {
 					display: grid;
 					grid-template-columns: 25% 75%;
-					gap: 2rem;
+					gap: 1rem;
 					width: 100%;
 
 					.pokemon-type-title {
@@ -146,8 +152,8 @@
 							gap: 1rem;
 
 							.pokemon-type-image {
-								height: 3rem;
-								width: 3rem;
+								height: 2rem;
+								width: 2rem;
 							}
 						}
 					}

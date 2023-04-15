@@ -1,5 +1,5 @@
 .pokemon-card-grid-container {
-	max-height: 80vh;
+	max-height: 76vh;
 	overflow-y: scroll;
 
 	.pokemon-card-grid {
@@ -65,7 +65,7 @@
 				transition: 0.1s ease-in-out;
 
 				&:hover {
-					color: #2994ff;
+					letter-spacing: 0.1rem;
 				}
 			}
 
@@ -111,7 +111,7 @@
 						transition: 0.1s ease-in-out;
 
 						&:hover {
-							color: #2994ff;
+							letter-spacing: 0.3rem;
 						}
 					}
 				}
