@@ -37,8 +37,10 @@ const Login = () => {
 		<div className="login">
 			<button className="login-btn" onClick={handleLogin}>
 				<FcGoogle />
-				<span className="log">log</span>
-				<span className="in">in</span>
+				<span className="test">
+					<span className="log">log</span>
+					<span className="in">in</span>
+				</span>
 				<span className="with">with</span>
 				<span className="google">google</span>
 			</button>
