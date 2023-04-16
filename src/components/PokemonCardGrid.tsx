@@ -1,4 +1,3 @@
-import React from "react";
 import { IoGitCompare } from "react-icons/io5";
 import { FaPlus, FaTrash } from "react-icons/fa";
 

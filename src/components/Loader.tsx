@@ -1,4 +1,3 @@
-import React from "react";
 import pokeballLoader from "../assets/pokeball-loader.gif";
 function Loader() {
 	return (

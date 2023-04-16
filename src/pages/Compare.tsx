@@ -1,4 +1,3 @@
-import React from "react";
 import Wrapper from "../sections/Wrapper";
 import CompareContainer from "../components/CompareContainer";
 import { useAppSelector } from "../app/hooks";

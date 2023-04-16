@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Wrapper from "../sections/Wrapper";
 import { useAppSelector } from "../app/hooks";
 import Login from "../components/Login";

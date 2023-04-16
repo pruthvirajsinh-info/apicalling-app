@@ -2,7 +2,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { generatedPokemonTYPE, genericPokemonTYPE } from "../../utils/Types";
 import axios from "axios";
 import { defaultImages, images } from "../../utils/getPokemonImages";
-import { types } from "util";
 import { pokemonTypes } from "../../utils/getPokemonTypes";
 
 export const getpokemonData = createAsyncThunk("pokemon/randomPokemo", async (pokemons:genericPokemonTYPE[]) => {

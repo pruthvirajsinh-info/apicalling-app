@@ -1,4 +1,3 @@
-import React from "react";
 import Wrapper from "../sections/Wrapper";
 import pic from "../assets/pc.png";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";

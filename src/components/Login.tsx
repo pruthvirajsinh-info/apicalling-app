@@ -1,5 +1,4 @@
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { firebaseAuth, firebaseDB, usersRef } from "../utils/firebaseConfig";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";

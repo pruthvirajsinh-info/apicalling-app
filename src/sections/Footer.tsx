@@ -1,5 +1,4 @@
 import { signOut } from "firebase/auth";
-import React from "react";
 import { MdOutlinePowerSettingsNew } from "react-icons/md";
 import { firebaseAuth } from "../utils/firebaseConfig";
 import { useAppDispatch } from "../app/hooks";

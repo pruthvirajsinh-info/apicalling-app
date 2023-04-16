@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import PokemonCardGrid from "../../components/PokemonCardGrid";
 import { getpokemonData } from "../../app/reducers/getPokemonData";
