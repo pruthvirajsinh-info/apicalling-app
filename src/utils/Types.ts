@@ -9,6 +9,19 @@ export interface PokemonSliceInitTYPE {
 	randomPokemons: undefined | generatedPokemonTYPE[];
 	compareQueue: generatedPokemonTYPE[];
 	userPokemons: userPokemonsTYPE[];
+	currentPokemon: undefined | currentPokemonTYPE;
+}
+
+export interface currentPokemonTYPE {
+	id: number;
+	name: string;
+	types: pokemonTYPE[];
+	image: string;
+	stats: pokemonStateTYPE[];
+	encounters: string[];
+	evolutionLevel: number;
+	evolution: { level: number; pokemon: { name: string; url: string } }[];
+	pokemonAbilities: { abilities: string[]; moves: string[] };
 }
 
 export interface genericPokemonTYPE {
