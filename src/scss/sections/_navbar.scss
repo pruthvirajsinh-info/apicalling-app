@@ -60,10 +60,11 @@ nav {
 					font-weight: 700;
 					letter-spacing: 0.3rem;
 				}
-				transition: 0.1s ease-in-out;
+				transition: 0.2s ease-in-out;
 
 				&:hover {
 					li {
+						letter-spacing: 0.4rem;
 						color: var(--accent-color);
 						filter: saturate(9);
 					}
@@ -71,7 +72,7 @@ nav {
 				&:active {
 					li {
 						transform: scale(0.9);
-						letter-spacing: 0.2rem;
+						letter-spacing: 0.3rem;
 					}
 				}
 			}

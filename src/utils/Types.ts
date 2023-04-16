@@ -17,7 +17,7 @@ export interface currentPokemonTYPE {
 	name: string;
 	types: pokemonTYPE[];
 	image: string;
-	stats: pokemonStateTYPE[];
+	stats: pokemonStatesInFACE[];
 	encounters: string[];
 	evolutionLevel: number;
 	evolution: { level: number; pokemon: { name: string; url: string } }[];
@@ -60,3 +60,23 @@ export interface pokemonStatesInFACE {
 	name: string;
 	value: string;
 }
+
+export type pokemonElementType =
+	| "bug"
+	| "dark"
+	| "dragon"
+	| "electric"
+	| "fairy"
+	| "fighting"
+	| "fire"
+	| "flying"
+	| "ghost"
+	| "grass"
+	| "ground"
+	| "ice"
+	| "normal"
+	| "poison"
+	| "psychic"
+	| "rock"
+	| "steel"
+	| "water";
