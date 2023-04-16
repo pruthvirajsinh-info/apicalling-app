@@ -18,17 +18,21 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background-color: var(--accent-color);
+			background-color: white;
 			transition: 0.1s ease-in-out;
-			&:hover {
-				filter: saturate(3);
-			}
+
 			&:active {
 				transform: scale(0.7);
 			}
 			svg {
 				font-size: 5rem;
-				color: whitesmoke;
+				color: var(--accent-color);
+			}
+			&:hover {
+				background-color: var(--accent-color);
+				svg {
+					color: white;
+				}
 			}
 		}
 		h3 {
