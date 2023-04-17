@@ -17,7 +17,7 @@ const MyList = () => {
 	}, [userInfo, dispatch]);
 
 	return (
-		<div className="list">
+		<div className="mylist">
 			{userInfo ? <PokemonCardGrid pokemons={userPokemons} /> : <Login />}
 		</div>
 	);

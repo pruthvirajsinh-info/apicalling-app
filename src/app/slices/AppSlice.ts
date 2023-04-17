@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { AppSliceInitTYPE } from "../../utils/Types";
 import { pokemonTabs } from "../../utils/Constans";
 
@@ -6,6 +6,7 @@ const initialState: AppSliceInitTYPE = {
 	toasts: [],
 	userInfo: undefined,
 	crntPokemonTab: pokemonTabs.description,
+	isLoading: true,
 };
 
 export const AppSlice = createSlice({
@@ -29,7 +30,17 @@ export const AppSlice = createSlice({
 		setPokemonTab: (state, action) => {
 			state.crntPokemonTab = action.payload;
 		},
+
+		setLoading: (state, action: PayloadAction<boolean>) => {
+			state.isLoading = action.payload;
+		},
 	},
 });
 
-export const { setToast, clearToasts, setUserStatus,setPokemonTab } = AppSlice.actions;
+export const {
+	setToast,
+	clearToasts,
+	setUserStatus,
+	setPokemonTab,
+	setLoading,
+} = AppSlice.actions;

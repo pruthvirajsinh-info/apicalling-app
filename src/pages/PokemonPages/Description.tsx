@@ -1,21 +1,34 @@
 import Info from "../../components/Info";
 import PokemonContainer from "../../components/PokemonContainer";
-import { useAppSelector } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import Loader from "../../components/Loader";
+import { useEffect } from "react";
+import { setLoading } from "../../app/slices/AppSlice";
 
 function Description() {
-	// const pokemonData = useAppSelector(({pokemon:{c}}))
+	const isLoading = useAppSelector(({ app: { isLoading } }) => isLoading);
+	const dispatch = useAppDispatch();
 	const pokemonData = useAppSelector(
 		({ pokemon: { currentPokemon } }) => currentPokemon
 	);
+
+	useEffect(() => {
+		if (pokemonData) {
+			dispatch(setLoading(false));
+		}
+	}, [pokemonData]);
+
 	return (
-		<div>
-			{pokemonData && (
-				<>
-					<Info data={pokemonData} />
-					<PokemonContainer image={pokemonData.image} />
-				</>
+		<>
+			{isLoading ? (
+				<Loader />
+			) : (
+				<div>
+					{<Loader /> && pokemonData && <Info data={pokemonData} />}
+					{pokemonData && <PokemonContainer image={pokemonData.image!} />}
+				</div>
 			)}
-		</div>
+		</>
 	);
 }
 

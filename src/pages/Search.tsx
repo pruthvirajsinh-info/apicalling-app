@@ -5,8 +5,12 @@ import { getInitialpokemonData } from "../app/reducers/getInitialpokemonData";
 import { getpokemonData } from "../app/reducers/getPokemonData";
 import PokemonCardGrid from "../components/PokemonCardGrid";
 import { debounce } from "../utils/Debounces";
+import Loader from "../components/Loader";
+import { setLoading } from "../app/slices/AppSlice";
 
 const Search = () => {
+	const isLoading = useAppSelector(({ app: { isLoading } }) => isLoading);
+
 	const dispatch = useAppDispatch();
 
 	const { allPokemon, randomPokemons } = useAppSelector(
@@ -27,6 +31,11 @@ const Search = () => {
 			dispatch(getpokemonData(randomPokemonId));
 		}
 	}, [allPokemon, dispatch]);
+	useEffect(() => {
+		if (randomPokemons) {
+			dispatch(setLoading(false));
+		}
+	}, [randomPokemons, dispatch]);
 
 	const handleChange = debounce((value: string) => getpokemon(value), 300);
 
@@ -48,15 +57,19 @@ const Search = () => {
 
 	return (
 		<>
-			<div className="search">
-				<input
-					type="text"
-					className="pokemon-searchbar"
-					placeholder="Search Pokemon"
-					onChange={(e) => handleChange(e.target.value)}
-				/>
-				<PokemonCardGrid pokemons={randomPokemons!} />
-			</div>
+			{isLoading ? (
+				<Loader />
+			) : (
+				<div className="search">
+					<input
+						type="text"
+						className="pokemon-searchbar"
+						placeholder="Search Pokemon"
+						onChange={(e) => handleChange(e.target.value)}
+					/>
+					<PokemonCardGrid pokemons={randomPokemons!} />
+				</div>
+			)}
 		</>
 	);
 };

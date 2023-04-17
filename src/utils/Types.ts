@@ -2,6 +2,7 @@ export interface AppSliceInitTYPE {
 	toasts: string[];
 	userInfo: undefined | { email: string };
 	crntPokemonTab: string;
+	isLoading: boolean;
 }
 
 export interface PokemonSliceInitTYPE {
