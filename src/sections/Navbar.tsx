@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import pokeballIcon from "../assets/pokeball-icon.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
@@ -6,28 +6,54 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
 	const location = useLocation();
 
-	const navigationRoutes = [
-		{
-			name: "Search",
-			route: "/search",
-		},
-		{
-			name: "Compare",
-			route: "/compare",
-		},
-		{
-			name: "Pokemon",
-			route: "/pokemon",
-		},
-		{
-			name: "My List",
-			route: "/mylist",
-		},
-		{
-			name: "About",
-			route: "/about",
-		},
-	];
+	// const navigationRoutes = [
+	// 	{
+	// 		name: "Search",
+	// 		route: "/search",
+	// 	},
+	// 	{
+	// 		name: "Compare",
+	// 		route: "/compare",
+	// 	},
+	// 	{
+	// 		name: "Pokemon",
+	// 		route: "/pokemon",
+	// 	},
+	// 	{
+	// 		name: "My List",
+	// 		route: "/mylist",
+	// 	},
+	// 	{
+	// 		name: "About",
+	// 		route: "/about",
+	// 	},
+	// ];
+
+	const navigationRoutes = useMemo(
+		() => [
+			{
+				name: "Search",
+				route: "/search",
+			},
+			{
+				name: "Compare",
+				route: "/compare",
+			},
+			{
+				name: "Pokemon",
+				route: "/pokemon",
+			},
+			{
+				name: "My List",
+				route: "/mylist",
+			},
+			{
+				name: "About",
+				route: "/about",
+			},
+		],
+		[]
+	);
 
 	useEffect(() => {
 		const index = navigationRoutes.findIndex(({ route }) =>

@@ -1,6 +1,6 @@
 import { useEffect, useCallback } from "react";
 import Wrapper from "../sections/Wrapper";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import axios from "axios";
 import {
@@ -20,7 +20,6 @@ import { setCurrentPokemon } from "../app/slices/PokemonSlice";
 function Pokemon() {
 	const params = useParams();
 	const dispatch = useAppDispatch();
-	const location = useLocation;
 	const { crntPokemonTab } = useAppSelector(({ app }) => app);
 
 	const getRecursiveEvolution: any = useCallback(

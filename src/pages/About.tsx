@@ -18,16 +18,16 @@ const About = () => {
 				responsive User Experience.
 			</h3>
 			<div className="profile-links">
-				<a href="https://github.com" target="_blank">
+				<a href="https://github.com" target="_blank" rel="noreferrer">
 					<FaGithub />
 				</a>
-				<a href="https://in.linkedin.com/" target="_blank">
+				<a href="https://in.linkedin.com/" target="_blank" rel="noreferrer">
 					<FaLinkedin />
 				</a>
-				<a href="https://www.twitter.com" target="_blank">
+				<a href="https://www.twitter.com" target="_blank" rel="noreferrer">
 					<FaTwitter />
 				</a>
-				<a href="https://www.instagram.com" target="_blank">
+				<a href="https://www.instagram.com" target="_blank" rel="noreferrer">
 					<FaInstagram />
 				</a>
 			</div>
