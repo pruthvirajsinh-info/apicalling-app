@@ -55,6 +55,8 @@ const Search = () => {
 		}
 	};
 
+	console.log("isLoading", isLoading);
+
 	return (
 		<>
 			{isLoading ? (

@@ -17,6 +17,7 @@ function Description() {
 			dispatch(setLoading(false));
 		}
 	}, [pokemonData, dispatch]);
+	
 
 	return (
 		<>
