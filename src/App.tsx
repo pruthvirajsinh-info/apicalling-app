@@ -18,6 +18,9 @@ import { clearToasts, setUserStatus } from "./app/slices/AppSlice";
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "./utils/firebaseConfig";
 
+//@ts-ignore
+import { Helmet } from "react-helmet";
+
 function App() {
 	const { toasts } = useAppSelector(({ app }) => app);
 	const dispatch = useAppDispatch();
@@ -50,6 +53,11 @@ function App() {
 
 	return (
 		<div className="main-container">
+			<Helmet>
+				<meta charSet="utf-8" />
+				<title>Card Collector</title>
+				<link rel="canonical" href="http://mysite.com/example" />
+			</Helmet>
 			<Background />
 			<BrowserRouter>
 				<div className="app">
